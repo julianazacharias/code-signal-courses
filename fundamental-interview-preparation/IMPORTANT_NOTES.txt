@@ -1,0 +1,143 @@
+HOW RANGE WORKS:
+
+***range(start, stop(NOT inclusive), step)***
+
+exemplo: for i in range(1, len(word), 2) ---> Iterar nas posições impares
+exemplo: for i in range(0, len(word), 2) ---> Iterar nas posições pares
+
+range vai da posição 1 até terminar a palavra
+i = 1, 3, 5, 7...
+
+o ultimo seria = len(word) -1
+pra incluir ele = len(word) que é NOT INCLUSIVE
+
+**************************************************************************************
+character = b
+espelho = chr(ord('z') + ord('a') - ord(character))
+espelho = chr(ord('Z') + ord('A') - ord(character))
+
+DESCOBRE O CARACTER OPOSTO (ESPELHO)
+
+
+**************************************************************************************
+
+CONTAR OS CARACTERES EM PYTHON --> ACHAR O CARACTERE MAIS COMUM NUMA PALAVRA:
+
+from collections import Counter
+
+word = "example"
+
+counter = Counter(word)
+
+most_common_char, count = counter.most_common(1)[0]  #### ISSO AQUI É UMA TUPLA ( char, num )
+
+#### most_common(1)[0]: Retrieves the most common character and its count from the list. It returns a tuple like
+
+print(f"The most frequent character is '{most_common_char}' with {count} occurrences.")
+
+
+
+**************************************************************************************
+
+CONTAR OS CARACTERES EM PYTHON --> ACHAR O CARACTERE MENOS COMUM NUMA PALAVRA:
+
+from collections import Counter
+
+# Define the string
+word = "example"
+
+# Create a Counter object
+counter = Counter(word)
+
+# Find the least common character and its count
+least_common_char, count = counter.most_common()[-1]
+
+
+**************************************************************************************
+SOMAR TODOS OS DIGITOS DE UM NUMERO
+
+def solution(n):
+    return sum(int(digit) for digit in str(n))
+    
+n = 29
+
+SE FOREM SÓ 2 DIGITOS:
+
+def solution(n):
+    p = n // 10   # primeiro a dezena
+    q = n % 10    # Unidade
+    return p + q
+    
+n = 29
+
+******************************************************************************************
+
+key = chr((ord(k) - ord('a') - 3) % 26 + ord('a'))
+
+Explanation:
+
+ord(k): This returns the ASCII value of character k.
+ord('a'): This returns the ASCII value of character 'a', which is 97.
+ord(k) - ord('a'): This calculates how far the character k is from 'a'.
+(ord(k) - ord('a') - 3) % 26: This shifts the character k back by 3 positions
+ in the alphabet, wrapping around using modulo 26.
++ ord('a'): This converts the position back to an ASCII value of the corresponding character.
+chr(...): This converts the resulting ASCII value back to a character.
+So, key = chr((ord(k) - ord('a') - 3) % 26 + ord('a')) calculates the character that comes 
+three positions before k in the alphabet, wrapping around if necessary.
+
+*******************************************************************************************
+
+return dict(sorted(new_dict.items()))
+
+new_dict.items():
+
+This method returns a view object that displays a list of a dictionary's 
+key-value tuple pairs. In new_dict, it would look something like 
+[('d', 97), ('e', 98), ('f', 99)].
+
+sorted(new_dict.items()):
+
+This function sorts the list of tuple pairs. By default, it sorts by the first item in each tuple,
+ which in this case are the dictionary keys (characters). 
+ Since the keys ['d', 'e', 'f'] are already sorted, it doesn't change the order here.
+dict(sorted(new_dict.items())):
+
+This converts the sorted list of tuple pairs back into a dictionary. 
+So, you end up with a sorted dictionary based on the keys. 
+In this case, {'d': 97, 'e': 98, 'f': 99}.
+
+##################################################################################################
+
+escolhido = 'y'
+key = chr((ord(escolhido) - ord('a') - 3) % 26 + ord('a'))
+
+print("ord(escolhido) : " + escolhido)
+print(ord(escolhido))
+print(ord(escolhido))
+
+print("ord('a')")
+print(ord('a'))
+print(ord('a'))
+
+print("(ord(escolhido) - ord('a') - 3)") # DISTANCIA DE CHR ATÉ O PRIMEIRO (QUE É O A)
+print((ord(escolhido) - ord('a') - 3))
+print((ord(escolhido) - ord('a') - 3))
+
+print("(ord(escolhido) - ord('a') - 3) % 26") # wrapping around using modulo 26.
+print((ord(escolhido) - ord('a') - 3) % 26)
+print((ord(escolhido) - ord('a') - 3) % 26)
+
+print("(ord(escolhido) - ord('a') - 3) % 26 + ord('a')") # Converts the position back to an ASCII value of the corresponding character.
+print((ord(escolhido) - ord('a') - 3) % 26 + ord('a'))
+print((ord(escolhido) - ord('a') - 3) % 26 + ord('a'))
+
+print("chr((ord(escolhido) - ord('a') - 3) % 26 + ord('a'))")
+print(chr((ord(escolhido) - ord('a') - 3) % 26 + ord('a')))
+print(chr((ord(escolhido) - ord('a') - 3) % 26 + ord('a')))
+
+##################################################################################################
+
+
+
+
