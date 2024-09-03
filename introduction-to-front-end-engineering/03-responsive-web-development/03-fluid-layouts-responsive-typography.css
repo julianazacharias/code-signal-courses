@@ -1,0 +1,159 @@
+/* Fluid Grid Layouts */
+
+.container {
+	width: 100%;
+} /* Full width */
+.column {
+	width: 33.33%;
+	float: left;
+} /* Each column consumes one third of the container's width */
+
+/* ******************************************************************************* */
+
+/* Flexible Images */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+/* ******************************************************************************* */
+
+/* Viewport Units: vh, vw
+
+Viewport units are units of measurement in CSS based on the size of the viewport, 
+which is the visible area of a webpage on your screen. 
+They enable sizes to adjust according to the viewport, thereby improving the responsiveness of your webpage.
+
+vh unit: 1vh represents 1% of the viewport's height. 
+So, a value of 50vh would be half the height of the viewport.
+
+vw unit: 1vw represents 1% of the viewport's width. For instance, 
+if you want a button to always be 30% of the screen width, you can give it a width of 30vw. */
+
+.hero {
+	height: 100vh;
+	text-align: center;
+	padding: 3vw;
+} /* Full-screen hero, padding is 3% of viewport width */
+
+/* ******************************************************************************* */
+
+/* Viewport Units: vmin and vmax */
+
+/* Viewport units vmin and vmax are based on the smaller 
+and larger dimension of the viewport, respectively.
+
+vmin: Represents 1% of the viewport's smaller dimension. If the viewport is 
+900px wide and 700px tall, 1vmin would equal 7px because the smaller dimension 
+is the height (700px).
+vmax: Represents 1% of the viewport's larger dimension. For the viewport sizes 
+mentioned above, 1vmax would equal 9px. */
+
+body {
+	font-size: 3vmin; /* Font size will resize based on smaller dimension of viewport */
+	line-height: 4vmax; /* line-height will resize based on larger dimension of viewport */
+}
+
+/* In this example, the font-size will always be 3% of the viewport's smaller dimension, 
+making the text readable on devices with wide or narrow screens. 
+The line-height is 4% of the viewport's larger dimension, ensuring there's 
+ample vertical space between lines on larger screens. */
+
+/* ******************************************************************************* */
+/* *********************     Responsive Typography     *************************** */
+
+body {
+	font-size: 16px;
+} /* default size */
+h1 {
+	font-size: 2em;
+} /* double the body's font size */
+
+/* ******************************************************************************* */
+/* *******************************  Box-sizing  ******************************** */
+
+/* The box-sizing property allows us to include the padding and border in an 
+element's total width and height.
+
+By default, when you set the width and height of an element, 
+it doesn't take into account any border or padding applied to the element. 
+This means that if you have a box with a width of 300px and padding of 20px, 
+the actual render size of that box would be 340px (300px width + 2 * 20px padding). 
+But if you want the width of the box to always remain 300px regardless 
+of padding or border, the box-sizing property can come in handy. */
+
+/* content-box: This is the default value. The width and height properties include 
+only the content of the element. Any padding or border added to the element is added 
+to this base width and height, resulting in a larger total size of the element.
+It does not include padding or borders. */
+
+.box1 {
+	box-sizing: content-box; /*PROPRIEDADES ADICIONAIS MUDAM O TAMANHO DA CAIXA*/
+	width: 300px;
+	padding: 10px;
+	border: 5px solid black;
+}
+
+/* border-box: The width and height properties include the content, padding, and border, 
+but do not include the margin. 
+This means that any padding or border you add won't affect the final dimensions of 
+the element as they're contained within the width and height. */
+
+.box2 {
+	box-sizing: border-box; /*PROPRIEDADES ADICIONAIS NÃO MUDAM O TAMANHO DA CAIXA */
+	width: 300px;
+	padding: 10px;
+	border: 5px solid black;
+}
+
+/* Note: The box-sizing property isn't inherited by default, 
+but you can make it inheritable by declaring box-sizing: inherit on an element. 
+This can be useful when you want consistent box-sizing behavior across your project. */
+
+/* ******************************************************************************* */
+
+/* Ensures that the image of the star expands or shrinks fluidly depending on the viewport size. */
+.star-photo img {
+	max-width: 90vw; /* Scales based on the width of the viewport. */
+	height: auto;
+}
+
+/* Apply responsive typography to adjust text size on different devices. */
+.mission-info p {
+	font-size: 3vw; /* Text size scales with viewport width. */
+}
+/* ******************************************************************************* */
+
+.space-box {
+	width: 50vw;
+	padding: 2vh;
+	background-color: #2e3b55;
+	color: white;
+	border: 5px solid #f0db4f;
+	box-sizing: border-box; /* Change this property to include padding & border */
+}
+
+/* ******************************************************************************* */
+
+/* The galactic hero section will cover the entire view height and width */
+.galactic-hero {
+	width: 100vw; /* Use viewport width for flexible container width */
+	height: 100vh; /* Incorrect viewport height unit */
+	background-image: url("https://codesignal-staging-assets.s3.amazonaws.com/uploads/1702500466105/html-placeholder3.png");
+	background-size: cover;
+	/* The CSS property background-size: cover; is used to specify how a background image should be 
+    scaled or resized within its containing element. When you set background-size: cover; on an element, 
+    it ensures that the background image covers the entire area of the element. */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+/* The heading will adapt its font size based on the viewport width */
+.galactic-hero h1 {
+	font-size: 5vw; /* Font size scales with viewport width */
+	color: white;
+}
+/* ******************************************************************************* */
+/* ******************************************************************************* */

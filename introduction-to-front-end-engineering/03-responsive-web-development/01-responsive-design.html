@@ -1,0 +1,174 @@
+<!-- Semantic Markup -->
+
+<body>
+	<header>
+		<h1>Welcome to my profile!</h1>
+	</header>
+
+	<main>
+		<section>
+			<h2>About Me</h2>
+			<p>Hi! I am an aspiring web developer.</p>
+		</section>
+
+		<section>
+			<h2>My Skills</h2>
+			<p>I love coding in HTML, CSS, and JavaScript.</p>
+		</section>
+	</main>
+
+	<footer>
+		<p>Thanks for visiting my profile!</p>
+	</footer>
+</body>
+
+<!-- ********************************************************************************************** -->
+
+<!-- Embracing Semantic Markup for Consistent Layout Across Screens -->
+
+<body>
+	<header>
+		<h1>Welcome to my Website!</h1>
+	</header>
+
+	<nav>
+		<a href="#contact">Contact</a>
+		<a href="#about">About</a>
+	</nav>
+
+	<main>
+		<article>
+			<h2>HTML and CSS Basics</h2>
+			<p>
+				HTML and CSS are the foundational technologies for building websites.
+			</p>
+		</article>
+
+		<aside>
+			<h4>Note</h4>
+			<p>HTML structures the webpage, while CSS styles it.</p>
+		</aside>
+	</main>
+
+	<footer>
+		<p>Thank You for Visiting!</p>
+	</footer>
+</body>
+
+<!-- While non-semantic HTML tags like <div> and <span> tell nothing about its content, 
+semantic tags like <header>, <nav>, <section>, <article>, <aside> and <footer> describe 
+precisely what kind of information you can expect within them. This ensures a consistent 
+cross-screen layout as the browser knows how to correctly display these elements regardless of the screen size. -->
+
+<!-- ********************************************************************************************** -->
+
+<!-- Responsive Audio and Video Elements -->
+
+<!-- HTML supports media elements such as images, audio, and video. Setting the max-width property 
+to 100% makes these media elements responsive. This adjustment ensures that the media elements 
+adapt their width to fit their container, thus ensuring an optimal viewing experience on screens of any size! -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			video {
+				max-width: 100%;
+				height: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<video controls>
+			<source src="myVideo.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		</video>
+		<audio controls>
+			<source src="myAudio.mp3" type="audio/mpeg" />
+			Your browser does not support the audio tag.
+		</audio>
+	</body>
+</html>
+
+<!-- ********************************************************************************************** -->
+
+<!-- Controls, Autoplay, and Other Attributes -->
+
+<!DOCTYPE html>
+<html>
+	<body>
+		<video controls autoplay width="500">
+			<!-- Video Element with Controls and Autoplay -->
+			<source src="path_to_your_video.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		</video>
+		<audio controls autoplay>
+			<!-- Audio Element with Controls and Autoplay -->
+			<source src="path_to_your_audio.mp3" type="audio/mpeg" />
+			Your browser does not support the audio element.
+		</audio>
+	</body>
+</html>
+
+<!-- Interactive controls like play, pause, and volume slider can easily be added to video or audio elements 
+by including the controls attribute in the video or audio tag. While other attributes, such as autoplay, 
+are available and start playing your media as soon as the webpage loads, it is recommended to avoid 
+using them without the user's explicit interaction, as they can detract from the overall user experience. -->
+
+<!-- ********************************************************************************************** -->
+
+<!-- Using min-width & max-width -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			div {
+				min-width: 200px;
+				max-width: 500px;
+				height: 300px;
+				background-color: powderblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div>This div's width will always be between 200px and 500px.</div>
+	</body>
+</html>
+<!-- ********************************************************************************************** -->
+<!-- Using 'auto' -->
+
+<div style="height: auto; width: auto; background-color: powderblue">
+	This div's height and width will be automatically adjusted according to its
+	content or parent's size.
+</div>
+<!-- ********************************************************************************************** -->
+
+/* Ensures the video is responsive and does not overflow its container */ video
+{ max-width: 100%; height: auto; }
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="solution.css" />
+		<title>Cosmic Voyage</title>
+	</head>
+	<body>
+		<main>
+			<article>
+				<h2>Pluto: The Orbiting Ice World</h2>
+				<video controls>
+					<source
+						src="https://codesignal-staging-assets.s3.amazonaws.com/uploads/1702917102941/video-placeholder.mp4"
+						type="video/mp4"
+					/>
+					Your browser does not support the video tag.
+				</video>
+			</article>
+		</main>
+	</body>
+</html>
+<!-- ********************************************************************************************** -->
+<!-- ********************************************************************************************** -->
+<!-- ********************************************************************************************** -->
+<!-- ********************************************************************************************** -->

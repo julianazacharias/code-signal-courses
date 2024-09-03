@@ -1,0 +1,88 @@
+/* Introduction to Media Queries in CSS */
+
+/* To perform a media query, we use the syntax @media <target> and (<conditions>) 
+Here target is the element we want to monitor.  
+When the target satifies conditions, the style inside the {} block is applied to our webpage.  
+The below code specifies the screen as the target. When the width of the screen is 600px or less, 
+the background-color of the body turns light blue: */
+/* 
+@media screen and (max-width: 600px) {
+	body {
+		background-color: lightblue;
+	}
+} */
+
+@media (min-width: 480px) {
+	.planet-menu > .planet-hidden {
+		display: block; /* Show when screen is wide enough */
+	}
+}
+
+/* ******************************************************************************* */
+/* *********************** Introduction to Media Features ************************** */
+
+/* Media features enable us to create more refined responsive designs. 
+The combination of min-width and max-width media features allows us to target 
+a specific range of screen sizes. The orientation feature helps us apply different 
+styles based on the device's landscape or portrait orientation, 
+while aspect-ratio addresses the screen's width-to-height ratio. */
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+	body {
+		background-color: coral;
+	}
+}
+
+/* ******************************************************************************* */
+/* ****************************  Aspect Ratio  ******************************* */
+
+/* Let's have a look at examples of using media queries with aspect ratio, and screen orientation. 
+The media feature aspect-ratio can be used to apply styles based on the aspect ratio of the viewport. */
+
+@media screen and (aspect-ratio: 16/9) {
+	body {
+		background-color: lavender;
+	}
+}
+
+/* ******************************************************************************* */
+/* ***************************** Screen Orientation ******************************* */
+
+/* We can also target device orientation, either landscape 
+(width greater than height) or portrait (height greater than width). */
+
+@media screen and (orientation: portrait) {
+	body {
+		font-size: 1em;
+	}
+}
+@media screen and (orientation: landscape) {
+	body {
+		font-size: 1.5em;
+	}
+}
+
+/* ******************************************************************************* */
+
+@media screen and (min-width: 400px) {
+	.planet-info {
+		background-color: midnightblue;
+		color: white;
+		padding: 20px;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 399px) {
+	.planet-info {
+		background-color: skyblue;
+		color: black;
+		padding: 10px;
+		text-align: center;
+	}
+}
+/* ******************************************************************************* */
+/* ******************************************************************************* */
+/* ******************************************************************************* */
+/* ******************************************************************************* */
+/* ******************************************************************************* */

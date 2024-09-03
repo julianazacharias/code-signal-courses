@@ -1,0 +1,137 @@
+/* Navigating through Various Screen Sizes
+The layout of a website can significantly differ depending on whether 
+it's being viewed on desktops, tablets, or mobile devices.
+
+ - When viewed on desktops, both the content and the navigation menu can comfortably coexist side by side.
+ - On tablets, designers often resort to a simplified navigation approach using the hamburger (☰) menus, which expand when clicked.
+ - On mobile devices, due to the stringent space constraints, minimalism takes center stage in layout design. */
+
+/* <!-- A simple navigation list example -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav> */
+
+/* ******************************************************************************* */
+
+/* Crafting Dynamic Menus with CSS and JavaScript
+Dynamic menus, such as dropdowns and toggles, add an element of interactivity 
+to website navigation. This interactivity is made possible by using CSS for design 
+purposes and JavaScript for adding interactive elements. */
+
+/* <!-- An example of a simple dropdown menu -->
+<div class="dropdown">
+  <button class="dropdown-button">Menu</button>
+  <div class="dropdown-content">
+    <a href="#">Option 1</a>
+    <a href="#">Option 2</a>
+    <a href="#">Option 3</a>
+  </div>
+</div>
+
+<!-- The accompanying CSS for the dropdown menu -->
+<style>
+.dropdown-content {
+  display: none;
+  position: absolute;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style> */
+
+/* ******************************************************************************* */
+/* *************************  The `display` Attribute  ************************** */
+
+/* block: Elements display as a block, like paragraphs and headers. 
+A block element starts on a new line, taking the full width available and has a top and a bottom margin. */
+
+div {
+	display: block;
+}
+
+/* inline: Elements display in-line, without starting a new line. 
+Inline elements don't occupy the entire space of a container. 
+Instead, they take only as much width as necessary. 
+There is no top or bottom margin, and you can't set the width or height. */
+
+span {
+	display: inline;
+}
+
+/* none: If an element has display: none;, the element will not be displayed at all—rendered 
+as if it was never part of the DOM. However, the element still exists in the DOM, just not visible. */
+
+div {
+	display: none;
+}
+
+/* inline-block: Elements set to inline-block are like display: inline elements, 
+but they can have a width and height. They're placed in-line but function as block-level elements within the line. */
+
+div {
+	display: inline-block;
+}
+
+/* flex: Flex layout is a way to lay out, align and distribute space among items in a container, 
+even when their size is unknown and/or dynamic. 
+The main idea behind the flex layout is to give the container the ability to alter its items' 
+width/height to best fill the available space. */
+
+div {
+	display: flex;
+}
+
+/* grid: Grid layout provides a system in which DOM elements can be arranged and aligned on a webpage, 
+like a flexible grid. It's a fantastic tool when designing a complex web layout. */
+
+div {
+	display: grid;
+}
+/* ******************************************************************************* */
+
+/* Style for planet-themed adaptive navigation */
+.planet-hidden {
+	display: none;
+}
+
+@media (min-width: 480px) {
+	.planet-menu > .planet-hidden {
+		display: block; /* Show the menu when the screen is wide enough */
+	}
+}
+
+/*  JavaScript for toggling the planet menu on small screens
+
+document.querySelector('.planet-toggle').addEventListener('click', function() {
+  document.getElementById('planet-items').classList.toggle('planet-hidden');
+
+}); */
+
+/* <!DOCTYPE html>
+<html>
+<head>
+    <title>Planet Menu</title>
+    <link rel="stylesheet" href="solution.css">
+</head>
+<body>
+<div class="planet-menu">
+    <span class="planet-toggle">&#9776; Planets Menu</span>
+    <div id="planet-items" class="planet-hidden">
+        <a href="#mercury">Mercury</a>
+        <a href="#venus">Venus</a>
+        <a href="#earth">Earth</a>
+    </div>
+</div>
+<script src="solution.js"></script>
+</body>
+</html> */
+
+/* ******************************************************************************* */
+/* ******************************************************************************* */
+/* ******************************************************************************* */
+/* ******************************************************************************* */
+/* ******************************************************************************* */

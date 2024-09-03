@@ -1,0 +1,194 @@
+<!-- HOVER EFFECT -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			/* When hovered over, div becomes yellow */
+			div:hover {
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- The following div changes color when you hover over it -->
+		<div>Hover over me!</div>
+	</body>
+</html>
+
+<!-- ******************************************************************************** -->
+
+<!-- Transition and Transform Effects-->
+
+<style>
+	div {
+		width: 100px;
+		height: 100px;
+		background: red;
+
+		/* defining a transition on the transform property */
+		transition-property: transform;
+
+		/* the transition is over a period of 2 seconds */
+		transition-duration: 2s;
+
+		/* the speed of transition starts slow, ends fast */
+		transition-timing-function: ease-in;
+	}
+
+	div:hover {
+		/* When hovered over, the div rotates 180 degrees */
+		transform: rotate(180deg);
+	}
+</style>
+<body>
+	<div></div>
+</body>
+
+<!-- ******************************************************************************** -->
+
+<!-- Scaling Up: The `transition` Shorthand Property -->
+
+<!-- linear: This function creates a uniform transition.
+ease: This function starts slowly, then speeds up, and finishes slowly. This is the default value for the CSS transition-timing-function property.
+ease-in: This function starts slowly, then speeds up until the end of the animation.
+ease-out: This function starts at normal speed and slows down at the end, which is useful for transitions that blur or fade out.
+ease-in-out: This function starts slowly, is fastest in the middle of the animation, and finishes slowly.
+
+transition: property duration timing-function; -->
+
+<style>
+	div {
+		width: 100px;
+		height: 100px;
+		background: red;
+
+		/* Use the transition shorthand property */
+		transition: transform 2s ease-in;
+	}
+
+	div:hover {
+		transform: rotate(180deg); /* The div will rotate 180 degrees */
+	}
+</style>
+<body>
+	<div></div>
+</body>
+<!-- ******************************************************************************** -->
+
+<!-- ************** Applying Transitions to Specific Pseudo-classes *********** -->
+
+<style>
+    div {
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+    
+    div:hover {
+      width: 200px;
+      /* Set the transition property under :hover */
+      transition: width 2s;
+    }
+    
+    div:active {
+      width: 300px;
+      /* Transition is not specified under :active, so no transition will occur */
+    }
+    </style>
+    <body>
+    <div>Click and hold, or hover over me.</div>
+    </body>
+</html>
+<!-- ******************************************************************************** -->
+
+<!-- ************************  Fade Effect  ************************ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  /* The element is initially invisible */
+  opacity: 0;
+  /* The element will slowly become visible over 2 seconds */
+  transition: opacity 2s;
+}
+
+div:hover {
+  /* The element is visible when hovered over */
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<!-- A piece of text that becomes readable only when hovered -->
+<div>This is my fading text.</div>
+</body>
+</html>
+
+<!-- ******************************************************************************** -->
+<!-- *****************  Interactive Forms with Focus Effect  ************** -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+
+<style>
+/* Form fields highlight yellow when active */
+input:focus {
+  background-color: yellow;
+}
+</style>
+
+</body>
+</html>
+<!-- ******************************************************************************** -->
+
+<style>
+    /* When a text field is active, its border turns blue. */
+    input[type=text]:focus {
+      border: 3px solid blue;
+    }
+</style>
+    
+<form>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+</form>
+<!-- ******************************************************************************** -->
+
+.colorful-square {
+    width: 150px;
+    height: 150px;
+    background-color: violet;
+    transition: background-color 2s, transform 2s;
+  }
+  
+  .colorful-square:hover {
+    background-color: orange;
+    transform: scale(1.2); /* The square grows bigger when you hover over it! */
+  }
+
+  
+<!-- ******************************************************************************** -->
+
+.product-image {
+    width: 200px;
+    height: 200px;
+    background-image: url('https://codesignal-staging-assets.s3.amazonaws.com/uploads/1702500465136/html-placeholder1.png');
+    transition: transform 0.3s ease;
+  }
+  
+  .product-image:hover {
+    transform: scale(0.8); /* Can you change this value to make the image smaller upon hovering */
+  }
+  
+<!-- ******************************************************************************** -->
